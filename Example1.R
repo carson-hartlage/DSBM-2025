@@ -13,6 +13,9 @@ header2 <- scan(file, skip = 1, nlines = 1, sep="\t", what = character())
 LumA <- data[data$gene_id %in% first10,header2=='Luminal A']
 Basal <- data[data$gene_id %in% first10,header2=='Basal-like']
 
+LumA <- data[data$gene_id %in% first10,header2=='Luminal A']
+Basal <- data[data$gene_id %in% first10,header2=='Basal-like']
+
 LumA_groups <- split(colnames(LumA), sample(1:nfold, ncol(LumA), replace=T))
 Basal_groups <- split(colnames(Basal), sample(1:nfold, ncol(Basal), replace=T))
   
